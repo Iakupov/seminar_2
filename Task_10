@@ -14,5 +14,4 @@ string SecondDigit(string arg)
 }
 Console.WriteLine("Введите трехзначное число:");
 string number=Console.ReadLine()!;
-//int number=int.Parse(Console.ReadLine()!);
 Console.WriteLine(SecondDigit(number));
