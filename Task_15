@@ -1,0 +1,20 @@
+Console.WriteLine("Введите число дня недели от 1 до 7");
+int number=int.Parse(Console.ReadLine()!)-1;
+if (number>=0 && number<7)
+{
+    string [] array={"понедельник","вторник", "среда", "четверг","пятница","суббота","воскресенье"};
+    int i=0;
+    while (i<7)
+    {
+        if (number==i)
+        {
+            Console.WriteLine("День недели: "+array[i]);
+            break;
+        }
+        i++; 
+    }
+}
+else
+{
+    Console.WriteLine("Число лежит за пределы от 1 до 7");
+}
