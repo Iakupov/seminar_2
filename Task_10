@@ -1,0 +1,18 @@
+string SecondDigit(string arg)
+{
+    int number1=int.Parse(arg);
+    if (number1/100>0 && number1/100<10)
+    {
+        number1=(number1/10)%10;
+        arg=number1.ToString();
+    }
+    else 
+    {
+        arg="Число не трехзначное";
+    }
+    return arg;
+}
+Console.WriteLine("Введите трехзначное число:");
+string number=Console.ReadLine()!;
+//int number=int.Parse(Console.ReadLine()!);
+Console.WriteLine(SecondDigit(number));
