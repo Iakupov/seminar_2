@@ -1,0 +1,23 @@
+string SecondDigit(string arg)
+{
+    int number1=Math.Abs(int.Parse(arg));
+    int count=100;
+    if (number1/count>0)
+    {
+        while (number1/count>0)
+        {
+            count=count*10;
+        }
+    count=count/1000;
+    number1=(number1/count)%10;
+    arg=number1.ToString();
+    }
+    else 
+    {
+        arg="Третьей цифры нет";
+    }
+    return arg;
+}
+Console.WriteLine("Введите число:");
+string number=Console.ReadLine()!;
+Console.WriteLine(SecondDigit(number));
